@@ -64,3 +64,25 @@ BEGIN
   END;
   SET @year = @year + 1;
 END;
+
+
+
+ALTER TABLE calendar
+ADD school_year VARCHAR(9);
+
+UPDATE calendar
+SET school_year =
+CASE WHEN [date] between '2022-09-01' and '2023-08-31' THEN '2022/2023'
+	 WHEN [date] between '2023-09-01' and '2024-08-31' THEN '2023/2024'
+	WHEN [date] between '2024-09-01' and '2025-08-31' THEN '2024/2025'
+	 WHEN [date] between '2025-09-01' and '2026-08-31' THEN '2025/2026'
+	 WHEN [date] between '2026-09-01' and '2027-08-31' THEN '2026/2027'
+	 WHEN [date] between '2027-09-01' and '2028-08-31' THEN '2027/2028'
+	 WHEN [date] between '2028-09-01' and '2029-08-31' THEN '2028/2029'
+	 WHEN [date] between '2029-09-01' and '2030-08-31' THEN '2029/2030'
+	 WHEN [date] between '2030-09-01' and '2031-08-31' THEN '2030/2031'
+	 WHEN [date] between '2031-09-01' and '2032-08-31' THEN '2031/2032'
+	 WHEN [date] between '2032-09-01' and '2033-08-31' THEN '2032/2033'
+	 WHEN [date] between '2033-09-01' and '2034-08-31' THEN '2033/2034'
+END
+;
