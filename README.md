@@ -18,6 +18,7 @@ Datumy generuje od 1.1.2023 až do 31.12.2033
 TODO: 
 1) Přidat český školní rok.
 2) Přidat den v týdnu.
+3) Pridat Ceske jmena
 
 
 EN:
@@ -38,6 +39,7 @@ Dates generated from 1.1.2023 to 31.12.2033
 TODO: 
 1) Add Czech school year.
 2) Add day of the week.
+3) add Czech name
 
 
 
